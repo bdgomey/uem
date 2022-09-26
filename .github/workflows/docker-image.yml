@@ -1,5 +1,9 @@
 name: Docker Image CI
 
+env:
+  PROJECT_NAME: UEM              # set this to your project's name
+  RESOURCE_GROUP: K8s-AKS-RG          # set this to the resource group containing your AKS cluster
+  CLUSTER_NAME: k8sCluster 
 on:
   push:
     branches: [ "main" ]
@@ -33,4 +37,13 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-    
+          
+      - name: Kubernetes context
+        uses: Azure/k8s-set-context@v1
+        with:
+          method: kubeconfig
+          kubeconfig: ${{ secrets.KUBE_CONFIG }}
+          namespace: default
+
+      - name: Deploy
+        run: kubectl rollout restart deployment uem
