@@ -29,4 +29,7 @@ td, th {
 }
 .topics {
   font-family: sans-serif; Bookman, URW Bookman L
+  font-family: cursive;
+  font-size: 30px;
+  strong;
 }
