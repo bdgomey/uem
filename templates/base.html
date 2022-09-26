@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enterprise Desktop Engineer</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <img src="{{ url_for('static',filename='images/logo.png') }}" alt="" width="40" height="40">
+      <a class="navbar-brand" href="{{ url_for('index') }}">Enterprise Desktop Engineer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('lessons') }}">Lessons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('videos') }}">Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('calendar') }}">Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('calendar') }}">Quality Audit Topics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('helpful_links') }}">Helpful Links</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <hr>
+  {% block content %}
+  {% endblock %}
+</body>
+<hr>
+<footer>
+  <table>
+    <tr>
+      <th>Instructor</th>
+      <th>Contact Info</th>
+    </tr>
+    <td>Brian Gomes</td>
+    <td><a href="mailto:bgomes@skillstorm.com">bgomes@skillstorm.com</a></td>
+  </table>
+</footer>
+
+</html>

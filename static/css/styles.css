@@ -1,0 +1,30 @@
+body {
+  background-color: Azure;
+}
+.navbar-custom {
+  background-color: orange;
+}
+hr {
+  border-width: thick;
+  border-color: black;
+
+}
+.navbar-brand {
+  font-family: Bookman, URW Bookman L, serif
+}
+
+td, th {
+
+  text-align: justify;
+  padding-right: 300px;
+}
+
+.intro {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  font-family: sans-serif; Bookman, URW Bookman L
+}
+.topics {
+  font-family: sans-serif; Bookman, URW Bookman L
+}

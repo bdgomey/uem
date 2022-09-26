@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+  <ol>
+    <li><a href="{{ url_for('essentials') }}">Azure Essentials</a></li>
+    <ul>
+      <li>Describe Cloud Concepts</li>
+      <li>Describe Azure Architecture and Services</li>
+      <li>Describe Management and Governance</li>
+    </ul>
+    <li><a href="{{ url_for('adminscripting') }}">Administration and Scripting</a></li>
+    <ul>
+      <li>Unix/Linux ans Windows Administration Basic</li>
+      <li>Bash Scripting</li>
+      <li>Powershell Sripting</li>
+      <li>Python Basics</li>
+      <li>Azure ARM/Bicep</li>
+      <li>Automation with Azure Functions</li>
+    </ul>
+    <li><a href="{{ url_for('networkingdatabases') }}">Networking and Databases</a></li>
+    <ul>
+      <li>Azure Netowrking Basics (VNETS, LoadBalancers, Firewalls, Security Groups, Gateways)</li>
+      <li>Azure SQL Databases</li>
+      <li>Azure CosmosDB</li>
+      <li>Database Replication and High Availability</li>
+      <li>DataBricks and DataLakes</li>
+      <li>Azure Logs</li>
+      <li>Azure Alerts</li>
+    </ul>
+    <li><a href="{{ url_for('IAM') }}">Identity and Access Management</a></li>
+    <ul>
+      <li>Azure Active Directory </li>
+      <li>Licensing</li>
+      <li>Users and Group Management</li>
+      <li>Federation</li>
+      <li>SSO</li>
+    </ul>
+    <li><a href="{{ url_for('endpointmanagement') }}">Endpoint Management and Security</a></li>
+    <ul>
+      <li>VMWare Desktop</li>
+      <li>Azure Virtual Desktop</li>
+      <li>VMWare Workspace One</li>
+      <li>Unified Endpoint Management Tools</li>
+      <li>Carbon Black</li>
+      <li>CrowdStrike</li>
+      <li>Assett Management</li>
+      <li>Endpoint Compliance and Reporting</li>
+      <li>Operating System Vulnerabilities and Patching</li>
+    </ul>
+  </ol>
+</ul>
+{% endblock %}
